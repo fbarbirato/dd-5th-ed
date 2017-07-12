@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3653101E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "DungeonsAndDragons\v1\src\Domain\Domain.csproj", "{18A51888-8948-4C79-855C-D9A2D7876422}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Tests", "Domain.Tests\Domain.Tests.csproj", "{AC0994B6-5809-4BCD-B3D7-7A60B19DF369}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{18A51888-8948-4C79-855C-D9A2D7876422}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18A51888-8948-4C79-855C-D9A2D7876422}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18A51888-8948-4C79-855C-D9A2D7876422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC0994B6-5809-4BCD-B3D7-7A60B19DF369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC0994B6-5809-4BCD-B3D7-7A60B19DF369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC0994B6-5809-4BCD-B3D7-7A60B19DF369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC0994B6-5809-4BCD-B3D7-7A60B19DF369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -29,5 +35,6 @@ Global
 		{C192E355-5372-4C10-AA4A-B6652EEA3EE3} = {1FD57445-B9DA-448E-ABBC-4696450FB1B9}
 		{3653101E-F518-496C-B6B5-B628411AFB00} = {1FD57445-B9DA-448E-ABBC-4696450FB1B9}
 		{18A51888-8948-4C79-855C-D9A2D7876422} = {C192E355-5372-4C10-AA4A-B6652EEA3EE3}
+		{AC0994B6-5809-4BCD-B3D7-7A60B19DF369} = {3653101E-F518-496C-B6B5-B628411AFB00}
 	EndGlobalSection
 EndGlobal

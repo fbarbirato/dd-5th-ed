@@ -19,5 +19,15 @@ namespace DungeonsAndDragons.v1.Domain
         public Race Race { get; set; }
         public Class Class { get; set; }
         public Inventory Inventory { get; set; }
+
+        public int GetStartingHitPoints()
+        {
+            return Convert.ToInt32(Class.HitDie) + CalculateModifier(Constitution);
+        }
+
+        private int CalculateModifier(int attribute)
+        {
+            return (attribute - 10) / 2;
+        }
     }
 }

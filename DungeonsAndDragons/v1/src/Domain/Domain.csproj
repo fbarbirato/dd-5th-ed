@@ -6,4 +6,8 @@
     <RootNamespace>DungeonsAndDragons.v1.Domain</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Races\" />
+  </ItemGroup>
+
 </Project>

@@ -6,6 +6,6 @@ namespace DungeonsAndDragons.v1.Domain
 {
     public abstract class Class
     {
-        public Dice HitDie { get; set; }
+        public abstract Dice HitDie { get; }
     }
 }
