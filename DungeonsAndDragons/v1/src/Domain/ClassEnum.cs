@@ -4,8 +4,11 @@ using System.Text;
 
 namespace DungeonsAndDragons.v1.Domain
 {
-    public abstract class Race
+    public enum ClassEnum
     {
-        public abstract Abilities ApplyAbilityModifiers(Abilities abilities);
+        Fighter,
+        Wizard,
+        Rogue,
+        Cleric
     }
 }
