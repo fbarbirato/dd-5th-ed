@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DungeonsAndDragons.Domain
+namespace DungeonsAndDragons.v1.Domain
 {
-    public class Race
+    public abstract class Race
     {
+
     }
 }

@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <AssemblyName>DungeonsAndDragons.Domain</AssemblyName>
-    <RootNamespace>DungeonsAndDragons.Domain</RootNamespace>
+    <AssemblyName>DungeonsAndDragons.v1.Domain</AssemblyName>
+    <RootNamespace>DungeonsAndDragons.v1.Domain</RootNamespace>
   </PropertyGroup>
 
 </Project>
