@@ -6,6 +6,6 @@ namespace DungeonsAndDragons.v1.Domain.Classes
 {
     public class Wizard : Class
     {
-        public override Dice HitDie => Dice.D4;
+        public override Dice HitDie => Dice.D6;
     }
 }

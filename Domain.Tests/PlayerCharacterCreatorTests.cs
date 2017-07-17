@@ -85,22 +85,24 @@ namespace DungeonsAndDragons.v1.Domain.Tests
             Assert.AreEqual(17, character.WIS);
             Assert.AreEqual(12, character.CHA);
         }
-
         [TestMethod]
-        public void NewCharacter_FighterWithCon18_ShouldStartWith14HP()
+        [DataRow(ClassEnum.Fighter, 18, 14)]
+        [DataRow(ClassEnum.Wizard, 10, 6)]
+        [DataRow(ClassEnum.Ranger, 15, 13)]
+        public void NewCharacter_GivenClassAndConstitution_ShouldStartWithExpectedHP(ClassEnum characterClass, int constitution, int expectedStartingHP)
         {
             // Arrange
             var creator = new PlayerCharacterCreator();
             var startingAbilities = new Abilities
             {
-                Constitution = 18,
+                Constitution = constitution,
             };
 
             // Act
-            var character = creator.NewCharacter("Wulfgar", RaceEnum.Human, ClassEnum.Fighter, startingAbilities);
+            var character = creator.NewCharacter("Wulfgar", RaceEnum.Human, characterClass, startingAbilities);
 
             // Assert
-            Assert.AreEqual(14, character.HP);
+            Assert.AreEqual(expectedStartingHP, character.HP);
         }
     }
 }
