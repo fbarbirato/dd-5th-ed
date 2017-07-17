@@ -29,11 +29,12 @@ namespace DungeonsAndDragons.v1.Domain
             {
                 case ClassEnum.Fighter:
                     return new Fighter();
+                case ClassEnum.Cleric:
+                    return new Cleric();
                 case ClassEnum.Wizard:
                     return new Wizard();
-                
                 default:
-                    throw new InvalidOperationException();
+                    throw new InvalidOperationException("Class not defined");
             }
         }
 
@@ -41,7 +42,7 @@ namespace DungeonsAndDragons.v1.Domain
         {
             switch (race)
             {
-                case RaceEnum.Human :
+                case RaceEnum.Human:
                     return new Human();
                 case RaceEnum.Dwarf:
                     return new Dwarf();

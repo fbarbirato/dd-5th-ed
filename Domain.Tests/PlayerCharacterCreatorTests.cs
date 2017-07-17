@@ -53,7 +53,7 @@ namespace DungeonsAndDragons.v1.Domain.Tests
             // Assert
             Assert.AreEqual(15, character.STR);
             Assert.AreEqual(10, character.DEX);
-            Assert.AreEqual(16, character.CON);
+            Assert.AreEqual(18, character.CON);
             Assert.AreEqual(11, character.INT);
             Assert.AreEqual(17, character.WIS);
             Assert.AreEqual(12, character.CHA);
