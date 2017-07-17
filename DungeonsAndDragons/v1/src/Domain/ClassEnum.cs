@@ -9,6 +9,7 @@ namespace DungeonsAndDragons.v1.Domain
         Fighter,
         Wizard,
         Rogue,
-        Cleric
+        Cleric,
+        Ranger
     }
 }

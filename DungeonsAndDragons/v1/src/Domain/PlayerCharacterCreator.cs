@@ -27,10 +27,12 @@ namespace DungeonsAndDragons.v1.Domain
         {
             switch (characterClass)
             {
-                case ClassEnum.Fighter:
+                case ClassEnum.Fighter: 
                     return new Fighter();
                 case ClassEnum.Cleric:
                     return new Cleric();
+                case ClassEnum.Ranger:
+                    return new Ranger();
                 case ClassEnum.Wizard:
                     return new Wizard();
                 default:
@@ -44,6 +46,8 @@ namespace DungeonsAndDragons.v1.Domain
             {
                 case RaceEnum.Human:
                     return new Human();
+                case RaceEnum.Elf:
+                    return new Elf();
                 case RaceEnum.Dwarf:
                     return new Dwarf();
                 default :

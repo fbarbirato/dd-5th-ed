@@ -60,6 +60,33 @@ namespace DungeonsAndDragons.v1.Domain.Tests
         }
 
         [TestMethod]
+        public void NewCharacter_Elf_ShouldAdd2ToDEX()
+        {
+            // Arrange
+            var creator = new PlayerCharacterCreator();
+            var startingAbilities = new Abilities
+            {
+                Strength = 15,
+                Dexterity = 17,
+                Constitution = 16,
+                Intelligence = 11,
+                Wisdom = 17,
+                Charisma = 12
+            };
+
+            // Act
+            var character = creator.NewCharacter("Landal", RaceEnum.Elf, ClassEnum.Ranger, startingAbilities);
+
+            // Assert
+            Assert.AreEqual(15, character.STR);
+            Assert.AreEqual(19, character.DEX);
+            Assert.AreEqual(16, character.CON);
+            Assert.AreEqual(11, character.INT);
+            Assert.AreEqual(17, character.WIS);
+            Assert.AreEqual(12, character.CHA);
+        }
+
+        [TestMethod]
         public void NewCharacter_FighterWithCon18_ShouldStartWith14HP()
         {
             // Arrange
