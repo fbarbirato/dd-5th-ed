@@ -33,7 +33,7 @@ namespace DungeonsAndDragons.v1.Domain
             HP = GetStartingHitPoints();
         }
 
-        internal int GetStartingHitPoints()
+        private int GetStartingHitPoints()
         {
             return Convert.ToInt32(Class.HitDie) + CalculateAbilityModifier(CON);
         }

@@ -43,8 +43,10 @@ namespace DungeonsAndDragons.v1.Domain
             {
                 case RaceEnum.Human :
                     return new Human();
+                case RaceEnum.Dwarf:
+                    return new Dwarf();
                 default :
-                    throw new InvalidOperationException();
+                    throw new InvalidOperationException("Race not defined");
             }
         }
     }
