@@ -85,11 +85,45 @@ namespace DungeonsAndDragons.v1.Domain.Tests
             Assert.AreEqual(17, character.WIS);
             Assert.AreEqual(12, character.CHA);
         }
+
         [TestMethod]
-        [DataRow(ClassEnum.Fighter, 18, 14)]
-        [DataRow(ClassEnum.Wizard, 10, 6)]
-        [DataRow(ClassEnum.Ranger, 15, 13)]
-        public void NewCharacter_GivenClassAndConstitution_ShouldStartWithExpectedHP(ClassEnum characterClass, int constitution, int expectedStartingHP)
+        public void NewCharacter_Halfling_ShouldAdd2ToDEX()
+        {
+            // Arrange
+            var creator = new PlayerCharacterCreator();
+            var startingAbilities = new Abilities
+            {
+                Strength = 8,
+                Dexterity = 17,
+                Constitution = 9,
+                Intelligence = 15,
+                Wisdom = 13,
+                Charisma = 14
+            };
+
+            // Act
+            var character = creator.NewCharacter("Bilbo", RaceEnum.Halfling, ClassEnum.Rogue, startingAbilities);
+
+            // Assert
+            Assert.AreEqual(8, character.STR);
+            Assert.AreEqual(19, character.DEX);
+            Assert.AreEqual(9, character.CON);
+            Assert.AreEqual(15, character.INT);
+            Assert.AreEqual(13, character.WIS);
+            Assert.AreEqual(14, character.CHA);
+        }
+
+        [TestMethod]
+        [DataRow(RaceEnum.Human, ClassEnum.Fighter, 18, 14)]
+        [DataRow(RaceEnum.Human, ClassEnum.Wizard, 10, 6)]
+        [DataRow(RaceEnum.Human, ClassEnum.Ranger, 15, 13)]
+        [DataRow(RaceEnum.Elf, ClassEnum.Cleric, 8, 7)]
+        [DataRow(RaceEnum.Dwarf, ClassEnum.Fighter, 18, 15)]
+        public void NewCharacter_GivenClassAndConstitution_ShouldStartWithExpectedHP(
+            RaceEnum characterRace, 
+            ClassEnum characterClass, 
+            int constitution, 
+            int expectedStartingHP)
         {
             // Arrange
             var creator = new PlayerCharacterCreator();
@@ -99,7 +133,7 @@ namespace DungeonsAndDragons.v1.Domain.Tests
             };
 
             // Act
-            var character = creator.NewCharacter("Wulfgar", RaceEnum.Human, characterClass, startingAbilities);
+            var character = creator.NewCharacter("Player Name", characterRace, characterClass, startingAbilities);
 
             // Assert
             Assert.AreEqual(expectedStartingHP, character.HP);

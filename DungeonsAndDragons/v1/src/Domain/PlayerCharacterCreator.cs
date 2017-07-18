@@ -33,6 +33,8 @@ namespace DungeonsAndDragons.v1.Domain
                     return new Cleric();
                 case ClassEnum.Ranger:
                     return new Ranger();
+                case ClassEnum.Rogue:
+                    return new Rogue();
                 case ClassEnum.Wizard:
                     return new Wizard();
                 default:
@@ -50,6 +52,8 @@ namespace DungeonsAndDragons.v1.Domain
                     return new Elf();
                 case RaceEnum.Dwarf:
                     return new Dwarf();
+                case RaceEnum.Halfling:
+                    return new Halfling();
                 default :
                     throw new InvalidOperationException("Race not defined");
             }
