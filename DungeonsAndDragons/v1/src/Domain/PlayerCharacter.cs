@@ -40,7 +40,21 @@ namespace DungeonsAndDragons.v1.Domain
 
         private int CalculateAbilityModifier(int abilityScore)
         {
-            return (abilityScore - 10) / 2;
+
+            decimal sum = (abilityScore - 10);
+
+            if (sum > 0)
+            {
+                return Convert.ToInt32(Math.Round(sum / 2, MidpointRounding.ToEven));
+            }
+            else if(sum < 0)
+            {
+                return Convert.ToInt32(Math.Round(sum / 2, MidpointRounding.AwayFromZero));
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }

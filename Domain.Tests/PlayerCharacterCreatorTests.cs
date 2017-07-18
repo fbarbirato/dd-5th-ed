@@ -119,6 +119,11 @@ namespace DungeonsAndDragons.v1.Domain.Tests
         [DataRow(RaceEnum.Human, ClassEnum.Ranger, 15, 13)]
         [DataRow(RaceEnum.Elf, ClassEnum.Cleric, 8, 7)]
         [DataRow(RaceEnum.Dwarf, ClassEnum.Fighter, 18, 15)]
+        [DataRow(RaceEnum.Halfling, ClassEnum.Rogue, 5, 3)]
+        [DataRow(RaceEnum.Halfling, ClassEnum.Rogue, 10, 6)]
+        [DataRow(RaceEnum.Human, ClassEnum.Fighter, 10, 10)]
+        [DataRow(RaceEnum.Elf, ClassEnum.Wizard, 3, 2)]
+        [DataRow(RaceEnum.Elf, ClassEnum.Wizard, 1, 1)]
         public void NewCharacter_GivenClassAndConstitution_ShouldStartWithExpectedHP(
             RaceEnum characterRace, 
             ClassEnum characterClass, 
