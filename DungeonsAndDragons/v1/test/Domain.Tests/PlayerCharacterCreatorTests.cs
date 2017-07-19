@@ -114,15 +114,15 @@ namespace DungeonsAndDragons.v1.Domain.Tests
         }
 
         [TestMethod]
-        //[DataRow(RaceEnum.Human, ClassEnum.Fighter, 18, 14)]
-        //[DataRow(RaceEnum.Human, ClassEnum.Wizard, 10, 6)]
-        //[DataRow(RaceEnum.Human, ClassEnum.Ranger, 15, 13)]
-        //[DataRow(RaceEnum.WoodElf, ClassEnum.Cleric, 8, 7)]
-        //[DataRow(RaceEnum.Halfling, ClassEnum.Rogue, 5, 3)]
-        //[DataRow(RaceEnum.Halfling, ClassEnum.Rogue, 10, 6)]
-        //[DataRow(RaceEnum.Human, ClassEnum.Fighter, 10, 10)]
-        //[DataRow(RaceEnum.WoodElf, ClassEnum.Wizard, 3, 2)]
-        //[DataRow(RaceEnum.WoodElf, ClassEnum.Wizard, 1, 1)]
+        [DataRow(RaceEnum.Human, ClassEnum.Fighter, 18, 14)]
+        [DataRow(RaceEnum.Human, ClassEnum.Wizard, 10, 6)]
+        [DataRow(RaceEnum.Human, ClassEnum.Ranger, 15, 13)]
+        [DataRow(RaceEnum.WoodElf, ClassEnum.Cleric, 8, 7)]
+        [DataRow(RaceEnum.Halfling, ClassEnum.Rogue, 5, 3)]
+        [DataRow(RaceEnum.Halfling, ClassEnum.Rogue, 10, 6)]
+        [DataRow(RaceEnum.Human, ClassEnum.Fighter, 10, 10)]
+        [DataRow(RaceEnum.WoodElf, ClassEnum.Wizard, 3, 2)]
+        [DataRow(RaceEnum.WoodElf, ClassEnum.Wizard, 1, 1)]
         [DataRow(RaceEnum.HillDwarf, ClassEnum.Fighter, 18, 16)]
         public void NewCharacter_GivenClassAndConstitution_ShouldStartWithExpectedHP(
             RaceEnum characterRace, 
