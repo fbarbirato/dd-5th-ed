@@ -6,9 +6,16 @@
         {
             abilities.Constitution += 2;
 
-            return ApplyAbilityModifiersForSubrace(abilities);
+            return ApplyAbilityModifiersFromSubrace(abilities);
         }
 
-        public abstract Abilities ApplyAbilityModifiersForSubrace(Abilities abilities);
+        public abstract Abilities ApplyAbilityModifiersFromSubrace(Abilities abilities);
+
+        public override void ApplyTraits(PlayerCharacter playerCharacter)
+        {
+            ApplyTraitsFromSubrace(playerCharacter);
+        }
+
+        public abstract void ApplyTraitsFromSubrace(PlayerCharacter playerCharacter);
     }
 }

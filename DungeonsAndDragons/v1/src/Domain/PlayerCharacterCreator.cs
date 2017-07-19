@@ -20,6 +20,8 @@ namespace DungeonsAndDragons.v1.Domain
             newCharacter.SetStartingAbilities(startingAbilities);
             newCharacter.SetStartingHP();
 
+            newCharacter.ApplyTraitsFromRace();
+
             return newCharacter;
         }
 

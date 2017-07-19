@@ -17,5 +17,9 @@ namespace DungeonsAndDragons.v1.Domain.Races
 
             return abilities;
         }
+
+        public override void ApplyTraits(PlayerCharacter playerCharacter)
+        {
+        }
     }
 }

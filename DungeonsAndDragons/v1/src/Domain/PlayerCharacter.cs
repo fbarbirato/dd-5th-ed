@@ -28,6 +28,11 @@ namespace DungeonsAndDragons.v1.Domain
             Abilities = Race.ApplyAbilityModifiers(startingAbilities);
         }
 
+        internal void ApplyTraitsFromRace()
+        {
+            Race.ApplyTraits(this);
+        }
+
         internal void SetStartingHP()
         {
             HP = GetStartingHitPoints();

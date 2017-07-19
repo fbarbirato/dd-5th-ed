@@ -11,5 +11,9 @@ namespace DungeonsAndDragons.v1.Domain.Races
             abilities.Dexterity += 2;
             return abilities;
         }
+
+        public override void ApplyTraits(PlayerCharacter playerCharacter)
+        {
+        }
     }
 }

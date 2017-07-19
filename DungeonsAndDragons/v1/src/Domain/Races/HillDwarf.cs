@@ -6,11 +6,17 @@ namespace DungeonsAndDragons.v1.Domain.Races
 {
     public class HillDwarf : Dwarf
     {
-        public override Abilities ApplyAbilityModifiersForSubrace(Abilities abilities)
+        public override Abilities ApplyAbilityModifiersFromSubrace(Abilities abilities)
         {
             abilities.Wisdom += 1;
 
             return abilities;
+        }
+
+        public override void ApplyTraitsFromSubrace(PlayerCharacter playerCharacter)
+        {
+            // Dwarven Toughness
+            playerCharacter.HP += 1;
         }
     }
 }
