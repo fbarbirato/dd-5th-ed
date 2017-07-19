@@ -3,7 +3,7 @@
     public enum RaceEnum
     {
         Human,
-        Elf,
+        WoodElf,
         Dwarf,
         Halfling
     }

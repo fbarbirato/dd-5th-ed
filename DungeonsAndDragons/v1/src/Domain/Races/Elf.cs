@@ -4,13 +4,15 @@ using System.Text;
 
 namespace DungeonsAndDragons.v1.Domain.Races
 {
-    public class Elf : Race
+    public abstract class Elf : Race
     {
         public override Abilities ApplyAbilityModifiers(Abilities abilities)
         {
             abilities.Dexterity += 2;
 
-            return abilities;
+            return ApplyAbilityModifiersForSubrace(abilities);
         }
+
+        public abstract Abilities ApplyAbilityModifiersForSubrace(Abilities abilities);
     }
 }
