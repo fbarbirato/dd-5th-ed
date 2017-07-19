@@ -33,7 +33,7 @@ namespace DungeonsAndDragons.v1.Domain.Tests
         }
 
         [TestMethod]
-        public void NewCharacter_Dwarf_ShouldAdd2ToCON()
+        public void NewCharacter_HillDwarf_ShouldAdd2ToCONAnd1ToWIS()
         {
             // Arrange
             var creator = new PlayerCharacterCreator();
@@ -48,14 +48,14 @@ namespace DungeonsAndDragons.v1.Domain.Tests
             };
 
             // Act
-            var character = creator.NewCharacter("Bruenor", RaceEnum.Dwarf, ClassEnum.Cleric, startingAbilities);
+            var character = creator.NewCharacter("Bruenor", RaceEnum.HillDwarf, ClassEnum.Cleric, startingAbilities);
 
             // Assert
             Assert.AreEqual(15, character.STR);
             Assert.AreEqual(10, character.DEX);
             Assert.AreEqual(18, character.CON);
             Assert.AreEqual(11, character.INT);
-            Assert.AreEqual(17, character.WIS);
+            Assert.AreEqual(18, character.WIS);
             Assert.AreEqual(12, character.CHA);
         }
 
@@ -118,7 +118,7 @@ namespace DungeonsAndDragons.v1.Domain.Tests
         [DataRow(RaceEnum.Human, ClassEnum.Wizard, 10, 6)]
         [DataRow(RaceEnum.Human, ClassEnum.Ranger, 15, 13)]
         [DataRow(RaceEnum.WoodElf, ClassEnum.Cleric, 8, 7)]
-        [DataRow(RaceEnum.Dwarf, ClassEnum.Fighter, 18, 15)]
+        [DataRow(RaceEnum.HillDwarf, ClassEnum.Fighter, 18, 15)]
         [DataRow(RaceEnum.Halfling, ClassEnum.Rogue, 5, 3)]
         [DataRow(RaceEnum.Halfling, ClassEnum.Rogue, 10, 6)]
         [DataRow(RaceEnum.Human, ClassEnum.Fighter, 10, 10)]

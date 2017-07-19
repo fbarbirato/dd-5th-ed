@@ -4,7 +4,7 @@
     {
         Human,
         WoodElf,
-        Dwarf,
+        HillDwarf,
         Halfling
     }
 }

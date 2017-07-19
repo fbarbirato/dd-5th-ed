@@ -50,8 +50,8 @@ namespace DungeonsAndDragons.v1.Domain
                     return new Human();
                 case RaceEnum.WoodElf:
                     return new WoodElf();
-                case RaceEnum.Dwarf:
-                    return new Dwarf();
+                case RaceEnum.HillDwarf:
+                    return new HillDwarf();
                 case RaceEnum.Halfling:
                     return new Halfling();
                 default :
